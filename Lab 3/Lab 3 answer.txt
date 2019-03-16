@@ -1,0 +1,41 @@
+﻿public Sequence(float divisionType, int resolution) throws InvalidMidiDataException {
+
+
+        this(divisionType, resolution, 0);
+    }
+    
+ public Sequence(float divisionType, int resolution, int numTracks) throws InvalidMidiDataException {
+
+
+        if (divisionType == PPQ)
+            this.divisionType = PPQ;
+        else if (divisionType == SMPTE_24)
+            this.divisionType = SMPTE_24;
+        else if (divisionType == SMPTE_25)
+            this.divisionType = SMPTE_25;
+        else if (divisionType == SMPTE_30DROP)
+            this.divisionType = SMPTE_30DROP;
+        else if (divisionType == SMPTE_30)
+            this.divisionType = SMPTE_30;
+        else throw new InvalidMidiDataException("Unsupported division type: " + divisionType);
+
+
+        this.resolution = resolution;
+
+
+        for (int i = 0; i < numTracks; i++) {
+            tracks.addElement(new Track());
+        }
+    }
+
+
+
+
+    public static Sequence createSequence(float divisionType, int resolution){
+        return new Sequence(divisionType, resolution);
+    }
+
+
+    public static Sequence createSequencenumTracks(float divisionType, int resolution, int numTracks){
+        return Sequence(divisionType, resolution, numTracks);
+    }

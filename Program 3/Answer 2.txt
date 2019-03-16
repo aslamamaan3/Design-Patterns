@@ -1,0 +1,7 @@
+Question 2 - What Words are accepted by this machine
+
+Answer - Words that are accepted by this machine are -
+	
+	1. Any words containing only even number of a's.
+	2. ANy words containing only even number of b'a.
+	3. Any words containing any combination of only even number of a's and even number of b's.

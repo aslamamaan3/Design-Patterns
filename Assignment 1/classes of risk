@@ -1,0 +1,28 @@
+CLASSES - 
+
+1. Player - 
+	-noOfUnits: int
+	-noOfTerritories: int
+	-continents[]: string
+	-noOfterritoryCards: int
+	-setType()
+	-acquireCards()
+	-attack()
+	-defend()
+	-fortify()
+
+
+2. TerritoryCards - 
+	-cardType: string
+	-carTterritory: string
+	-setStatus()
+
+3. Unit -
+	-unitType: string
+	-battleStatus: boolean
+	-setBattleStatus()
+
+4. Continent - 
+	-name: string
+	-noOfCardsOffered: int
+	-setCardsOffered()
